@@ -67,8 +67,8 @@ class Cinema:
     def view_films(self):
         return self.films
 
-    def sort_films(self, key):
-        return sorted(self.films, key=lambda film: getattr(film, key))
+        def sort_films(self,key):
+            return sorted(self.films, key=lambda film: getattr(film, key))
 
     def filter_films(self, **criteria):
         filtered_films = self.films
@@ -102,7 +102,7 @@ class Cinema:
 
         action = actions.get(choice)
         if action:
-            action()  # Выполняем соответствующее действие
+            action()
         else:
             print("Некорректный выбор, пожалуйста, попробуйте снова.")
 
